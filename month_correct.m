@@ -1,5 +1,8 @@
-pdir = '/usr/local/texlive/texmf-local/bibtex/bib/local/';
-
+if ismac
+    pdir = '/usr/local/texlive/texmf-local/bibtex/bib/local/';
+elseif ispc
+    pdir = 'C:/texlive/texmf-local/bibtex/bib/local/';
+end
 fp = fopen([pdir 'library.bib'],'r');
 
 fpw = fopen([pdir 'library_corr.bib'],'w');
